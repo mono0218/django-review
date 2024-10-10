@@ -24,6 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-3lsvf=_v%3dy#!xcbx3attbvd!+2*%k7l0a2hfad3blzvmw+2o'
 
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -85,6 +87,8 @@ if READ_ENV_FILE:
     env_file = str(BASE_DIR)+'/.env'
     env.read_env(env_file)
 
+
+VERCEL_BLOB_TOKEN = env('VERCEL_BLOB_TOKEN')
 
 DATABASES = {
    'default': {
